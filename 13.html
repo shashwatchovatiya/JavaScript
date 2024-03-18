@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date of Birth Validation</title>
+    <script>
+        function validateDateOfBirth() {
+            var dobInput = document.getElementById('dob').value;
+            var currentDate = new Date();
+            var enteredDate = new Date(dobInput);
+
+            if (enteredDate > currentDate) {
+                alert("Date of birth cannot be in the future.");
+            } else {
+                alert("Date of birth is valid.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Date of Birth Validation</h2>
+    <label for="dob">Enter your Date of Birth:</label>
+    <input type="date" id="dob">
+    <button onclick="validateDateOfBirth()">Validate</button>
+</body>
+</html>

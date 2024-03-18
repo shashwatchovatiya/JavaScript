@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Get the current date and time
+        const currentDate = new Date();
+
+        // Extract the components of the date and time
+        const month = currentDate.getMonth() + 1; // Months are zero-indexed
+        const date = currentDate.getDate();
+        const year = currentDate.getFullYear();
+
+        const hours = currentDate.getHours();
+        const minutes = currentDate.getMinutes();
+        const seconds = currentDate.getSeconds();
+
+        // Construct the formatted date and time strings
+        const formattedDate = `${date}/${month}/${year}`;
+        const formattedTime = `${hours}:${minutes}:${seconds}`;
+
+        // Print the formatted date and time
+        document.write("Date :- &nbsp; ", formattedDate + "<br><br>");
+        document.write("Time :-  &nbsp; ",formattedTime);
+    </script>
+</body>
+
+</html>

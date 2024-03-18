@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Factorial Calculator</title>
+</head>
+<body>
+
+  <script>
+    // Function to calculate factorial
+    function calculateFactorial() {
+      // Prompt the user to enter a number
+      var number = parseInt(prompt("Enter a number to calculate its factorial:"));
+      
+      // Initialize factorial to 1
+      var factorial = 1;
+
+      // Validate if the entered value is a number
+      if (isNaN(number)) {
+        alert("Please enter a valid number.");
+        return;
+      }
+
+      // Calculate factorial using do-while loop
+      do {
+        factorial *= number;
+        number--;
+      } while (number > 0);
+
+      // Display the factorial
+      alert("Factorial is: " + factorial);
+    }
+
+    // Call the function to calculate factorial
+    calculateFactorial();
+  </script>
+
+</body>
+</html>

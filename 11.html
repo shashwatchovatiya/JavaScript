@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verify Text Boxes</title>
+ 
+</head>
+<body>
+    <h2>Verify Text Boxes</h2>
+    <input type="text" id="textBox1" placeholder="Enter text...">
+    <br><br>
+    <input type="text" id="textBox2" placeholder="Enter text...">
+    <br><br>
+    <button onclick="verifyTextBoxes()">Verify</button>
+
+
+
+    <script>
+        function verifyTextBoxes() {
+            // Get the values of the text boxes
+            var textBox1Value = document.getElementById('textBox1').value;
+            var textBox2Value = document.getElementById('textBox2').value;
+
+            // Check if the values are the same
+            if (textBox1Value === textBox2Value) {
+                alert("Content of both text boxes are the same!");
+            } else {
+                alert("Content of both text boxes are different.");
+            }
+        }
+    </script>
+</body>
+</html>

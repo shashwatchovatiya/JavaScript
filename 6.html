@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 Array in count finder</title>
+</head>
+
+<body>
+    <script>
+       const a = [];
+   
+   var n = prompt("Enter the number of terms: ");
+   for (let i = 0; i < n; i++) {
+       var x = prompt("Enter number: ");
+       a.push(x); // Add the user input to the array
+   }
+
+   function count_duplicate(a) {
+       let counts = {};
+
+       for (let i = 0; i < a.length; i++) { // Use a.length instead of a
+           if (counts[a[i]]) {
+               counts[a[i]] += 1;
+           } else {
+               counts[a[i]] = 1;
+           }
+       }
+
+       for (let prop in counts) {
+           if (counts[prop] >= 2) {
+               console.log(prop + " counted: " + counts[prop] + " times.");
+           }
+       }
+       console.log(counts);
+       return counts;
+   }
+
+   // Call the function and store its result in a variable
+   const duplicatesCount = count_duplicate(a);
+   
+   // Now you can use the variable to print the result wherever you want
+   console.log("Counts of duplicates:", duplicatesCount);
+    
+    </script>
+</body>
+
+</html>

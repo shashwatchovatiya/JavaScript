@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Print Array Elements in Reverse Order</title>
+</head>
+<body>
+
+  <script>
+    // Prompt the user to enter the number of elements in the array
+    var numElements = parseInt(prompt("Enter the number of elements:"));
+
+    // Initialize an empty array to store user input
+    var arr = [];
+
+    // Loop to prompt the user to enter each element
+    var i = 0;
+    while (i < numElements) {
+      var element = prompt("Enter element " + (i + 1) + ":");
+      // Convert the input to a number before adding it to the array
+      arr.push(parseInt(element));
+      i++;
+    }
+
+    // User Enter Array in Below
+   for (let index = 0; index < arr.length; index++) {
+    document.write(arr[index]+"<br>");
+   }
+
+    document.write("<br>")
+    // Get the length of the array
+    var length = arr.length;
+
+    // Initialize an index to the last element
+    var j = length - 1;
+
+    // Print array elements in reverse order using a while loop
+    while (j >= 0) {
+    //   console.log(arr[j]);
+    document.write(arr[j] + "<br>");
+      j--;
+    }
+  </script>
+
+</body>
+</html>
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10 Login Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+    .container {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 50px;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    .error {
+        color: red;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="return validateForm()">
+        <div class="error" id="error"></div>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <input type="submit" value="Login">
+    </form>
+</div>
+<script>
+    function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var error = document.getElementById("error");
+        error.innerHTML = "";
+
+        if (username.trim() === "" || password.trim() === "") {
+            error.innerHTML = "Username and password cannot be empty.";
+            return false;
+        }
+
+        if (password.length < 6 || password.length > 12) {
+            error.innerHTML = "Password must be between 6 and 12 characters.";
+            return false;
+        }
+
+        // If all validations pass, return true to submit the form
+        return true;
+    }
+</script>
+</body>
+</html>

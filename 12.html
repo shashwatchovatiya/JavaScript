@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Price Range Validation</title>
+   
+</head>
+<body>
+    <h2>Price Range Validation</h2>
+    <label for="minPrice">Minimum Price:</label>
+    <input type="range" id="minPrice" min="0" value="1" max="100" step="0.01" >  
+    <span id="currentMinPrice"></span>
+    <br><br>
+    <label for="maxPrice">Maximum Price:</label>
+    <input type="range" id="maxPrice" min="0" value="1" max="100" step="0.01">
+    <span id="currentMaxPrice"></span>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var minPriceInput = document.getElementById('minPrice');
+            var maxPriceInput = document.getElementById('maxPrice');
+            var currentMinPrice = document.getElementById('currentMinPrice');
+            var currentMaxPrice = document.getElementById('currentMaxPrice');
+
+            // Initialize current range values
+            currentMinPrice.textContent = minPriceInput.value;
+            currentMaxPrice.textContent = maxPriceInput.value;
+
+            minPriceInput.addEventListener('input', updateCurrentMinPrice);
+            maxPriceInput.addEventListener('input', updateCurrentMaxPrice);
+
+            function updateCurrentMinPrice() {
+                currentMinPrice.textContent = minPriceInput.value;
+                validatePriceRange();
+            }
+
+            function updateCurrentMaxPrice() {
+                currentMaxPrice.textContent = maxPriceInput.value;
+                validatePriceRange();
+            }
+
+            function validatePriceRange() {
+                var minPrice = parseFloat(minPriceInput.value);
+                var maxPrice = parseFloat(maxPriceInput.value);
+
+                if (minPrice <= 0 || maxPrice <= 0) {
+                    alert("Both minimum and maximum prices must be greater than 0.");
+                    resetPrices();
+                    return;
+                }
+
+                if (maxPrice < minPrice) {
+                    alert("Maximum price cannot be less than minimum price.");
+                    resetPrices();
+                    return;
+                }
+            }
+
+            function resetPrices() {
+                minPriceInput.value = '1';
+                maxPriceInput.value = '1';
+                currentMinPrice.textContent = '1';
+                currentMaxPrice.textContent = '1';
+            }
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+
