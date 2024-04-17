@@ -6,26 +6,77 @@
 <title>Keyboard Events Example</title>
 </head>
 <body>
+  <button onclick="printArrayReverse()">Print Array Elements in Reverse Order</button>
+<!-- <input type="number" name="" id="num1">
+<input type="number" name="" id="num2">
+<input type="number" name="" id="num3"> -->
 
-<input type="text" id="textInput" placeholder="Type something...">
-
+<!-- <h2 id="result"></h2> -->
+<!-- <button onclick="findMaxandMin()">Find Max and Min</button> -->
 <script>
-  // Get the input element
-  var inputElement = document.getElementById("textInput");
+  // // Get the input element
+  // var inputElement = document.getElementById("textInput");
 
-  // Add event listeners for keydown, keyup, and keypress events
-  inputElement.addEventListener("keydown", function(event) {
-    console.log("Key down:", event.key);
-  });
+  // // Add event listeners for keydown, keyup, and keypress events
+  // inputElement.addEventListener("keydown", function(event) {
+  //   console.log("Key down:", event.key);
+  // });
 
-  inputElement.addEventListener("keyup", function(event) {
-    console.log("Key up:", event.key);
-  });
+  // inputElement.addEventListener("keyup", function(event) {
+  //   console.log("Key up:", event.key);
+  // });
 
-  inputElement.addEventListener("keypress", function(event) {
-    console.log("Key press:", event.key);
-  });
+  // inputElement.addEventListener("keypress", function(event) {
+  //   console.log("Key press:", event.key);
+  // });
+
+  /*     3 Code            */
+
+//   function findMaxandMin() {
+ 
+//   var num1 = parseInt(document.getElementById("num1").value);
+//   var num2 = parseInt(document.getElementById("num2").value);
+//   var num3 = parseInt(document.getElementById("num3").value);
+  
+
+//   if(isNaN(num1)||isNaN(num2)||isNaN(num3)){
+//     alert("Please Enter The valid Value");
+//     return; 
+//   }
+
+
+// var Max = Math.max(num1,num2,num3);
+
+// var Min = Math.min(num1,num2,num3);
+
+// // document.getElementsById('result').innerHTML="Minmum is  =" + Min + "<br>Maximum is =" + Max ;
+// document.getElementById('result').innerHTML = "Minimum is  = " + Min + "<br>Maximum is = " + Max;
+
+// }
+
+/******************** 5 code  *****************/
+var arr = [];
+			var a = prompt("Enter the number of elements:");
+			var i = 0;
+			while (i < a) {
+				arr[i] = prompt("Enter number " + (i+1) + ":");
+				i++;
+			}
+
+			// Print array elements in forward order
+			i = 0;
+			while (i < a) {
+				document.write(arr[i] + "<br>");
+				i++;
+			}
+
+			// Print array elements in reverse order
+			i = a - 1;
+			while (i >= 0) {
+				document.write(arr[i] + "<br>");
+				i--;
+			}
+		</script>
 </script>
-
 </body>
 </html>
